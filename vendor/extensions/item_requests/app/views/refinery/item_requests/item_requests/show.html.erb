@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @item_request.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @item_request.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%=raw @item_request.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Contact</h1>
+    <p>
+      <%=raw @item_request.contact %>
+    </p>
+  </section>
+  <section>
+    <h1>Expires</h1>
+    <p>
+      <%=raw @item_request.expires %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="item_requests">
+      <% @item_requests.each do |item_request| %>
+        <li>
+          <%= link_to item_request.title, refinery.item_requests_item_request_path(item_request) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

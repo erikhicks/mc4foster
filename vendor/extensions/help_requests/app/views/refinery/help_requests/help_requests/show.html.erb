@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @help_request.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @help_request.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%=raw @help_request.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Contact</h1>
+    <p>
+      <%=raw @help_request.contact %>
+    </p>
+  </section>
+  <section>
+    <h1>Expires</h1>
+    <p>
+      <%=raw @help_request.expires %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="help_requests">
+      <% @help_requests.each do |help_request| %>
+        <li>
+          <%= link_to help_request.title, refinery.help_requests_help_request_path(help_request) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

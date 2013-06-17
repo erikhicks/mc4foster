@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      help_requests:
+        title: Help Requests
+    help_requests:
+      admin:
+        help_requests:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Help Request
+            reorder: Réordonner les Help Requests
+            reorder_done: Fin de réordonnancement des Help Requests
+          records:
+            title: Help Requests
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Help Request. Cliquer sur "Créer un(e) nouve(au/l/lle) Help Request" pour créer votre premi(er/ère) help request.'
+          help_request:
+            view_live_html: Voir ce(t/tte) help request <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) help request
+            delete: Supprimer définitivement ce(t/tte) help request
+      help_requests:
+        show:
+          other: Autres Help Requests
+  activerecord:
+    attributes:
+      'refinery/help_requests/help_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires

@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      item_requests:
+        title: Item Requests
+    item_requests:
+      admin:
+        item_requests:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Item Request
+            reorder: Réordonner les Item Requests
+            reorder_done: Fin de réordonnancement des Item Requests
+          records:
+            title: Item Requests
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Item Request. Cliquer sur "Créer un(e) nouve(au/l/lle) Item Request" pour créer votre premi(er/ère) item request.'
+          item_request:
+            view_live_html: Voir ce(t/tte) item request <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) item request
+            delete: Supprimer définitivement ce(t/tte) item request
+      item_requests:
+        show:
+          other: Autres Item Requests
+  activerecord:
+    attributes:
+      'refinery/item_requests/item_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires

@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      item_requests:
+        title: Item Requests
+    item_requests:
+      admin:
+        item_requests:
+          actions:
+            create_new: Maak een nieuwe Item Request
+            reorder: Wijzig de volgorde van de Item Requests
+            reorder_done: Klaar met het wijzingen van de volgorde van de Item Requests
+          records:
+            title: Item Requests
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Item Requests. Druk op 'Maak een nieuwe Item Request' om de eerste aan te maken.
+          item_request:
+            view_live_html: Bekijk deze item request op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze item request
+            delete: Verwijder deze item request voor eeuwig
+      item_requests:
+        show:
+          other: Andere Item Requests
+  activerecord:
+    attributes:
+      'refinery/item_requests/item_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires

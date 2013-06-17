@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      help_requests:
+        title: Help Requests
+    help_requests:
+      admin:
+        help_requests:
+          actions:
+            create_new: Maak een nieuwe Help Request
+            reorder: Wijzig de volgorde van de Help Requests
+            reorder_done: Klaar met het wijzingen van de volgorde van de Help Requests
+          records:
+            title: Help Requests
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Help Requests. Druk op 'Maak een nieuwe Help Request' om de eerste aan te maken.
+          help_request:
+            view_live_html: Bekijk deze help request op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze help request
+            delete: Verwijder deze help request voor eeuwig
+      help_requests:
+        show:
+          other: Andere Help Requests
+  activerecord:
+    attributes:
+      'refinery/help_requests/help_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires

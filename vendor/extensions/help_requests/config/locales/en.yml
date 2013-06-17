@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      help_requests:
+        title: Help Requests
+    help_requests:
+      admin:
+        help_requests:
+          actions:
+            create_new: Add New Help Request
+            reorder: Reorder Help Requests
+            reorder_done: Done Reordering Help Requests
+          records:
+            title: Help Requests
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Help Requests yet. Click "Add New Help Request" to add your first help request.
+          help_request:
+            view_live_html: View this help request live <br/><em>(opens in a new window)</em>
+            edit: Edit this help request
+            delete: Remove this help request forever
+      help_requests:
+        show:
+          other: Other Help Requests
+  activerecord:
+    attributes:
+      'refinery/help_requests/help_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires

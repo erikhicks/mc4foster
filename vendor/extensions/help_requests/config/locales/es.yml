@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      help_requests:
+        title: Help Requests
+#        article: masculino/femenino
+    help_requests:
+      admin:
+        help_requests:
+          actions:
+            create_new: Crear nuevo help request
+            reorder: Reordenar help requests
+            reorder_done: Reordenación de help requests completada
+          records:
+            title: Help Requests
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay help requests todavía. Pulsa en "Crear nuevo Help Request" para crear tu primer help request.
+          help_request:
+            view_live_html: Ver este help request como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este help request
+            delete: Borrar este help request para siempre
+      help_requests:
+        show:
+          other: Otros help requests
+  activerecord:
+    attributes:
+      'refinery/help_requests/help_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires

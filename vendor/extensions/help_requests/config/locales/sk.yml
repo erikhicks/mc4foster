@@ -1,0 +1,30 @@
+sk:
+  refinery:
+    plugins:
+      help_requests:
+        title: Help Requests
+    help_requests:
+      admin:
+        help_requests:
+          actions:
+            create_new: Pridať Help Request
+            reorder: Preusporiadať Help Requests
+            reorder_done: Koniec radenia Help Requests
+          records:
+            title: Help Requests
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Help Requests. Kliknite na "Pridať Help Request" pre pridanie prvého help request.
+          help_request:
+            view_live_html: Zobraziť náhľad help request<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť help request
+            delete: Zmazať help request
+      help_requests:
+        show:
+          other: Daľšie Help Requests
+  activerecord:
+    attributes:
+      'refinery/help_requests/help_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires

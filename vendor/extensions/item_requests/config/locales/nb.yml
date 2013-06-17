@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      item_requests:
+        title: Item Requests
+    item_requests:
+      admin:
+        item_requests:
+          actions:
+            create_new: Lag en ny Item Request
+            reorder: Endre rekkefølgen på Item Requests
+            reorder_done: Ferdig å endre rekkefølgen Item Requests
+          records:
+            title: Item Requests
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Item Requests enda. Klikk på "Lag en ny Item Request" for å legge til din første item request.
+          item_request:
+            view_live_html: Vis hvordan denne item request ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne item request
+            delete: Fjern denne item request permanent
+      item_requests:
+        show:
+          other: Andre Item Requests
+  activerecord:
+    attributes:
+      'refinery/item_requests/item_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires

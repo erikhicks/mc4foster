@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="item_requests">
+    <% @item_requests.each do |item_request| %>
+      <li>
+        <%= link_to item_request.title, refinery.item_requests_item_request_path(item_request) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

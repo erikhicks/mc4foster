@@ -1,0 +1,40 @@
+<%= form_for [refinery, :item_requests_admin, @item_request] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @item_request,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:description],
+                :object => "item_requests/item_request" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :contact -%>
+    <%= f.text_field :contact -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :expires -%>
+    <%= f.datetime_select :expires -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.item_requests.admin.item_requests.item_request'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @item_request.title) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

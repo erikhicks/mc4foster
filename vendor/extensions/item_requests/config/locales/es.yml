@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      item_requests:
+        title: Item Requests
+#        article: masculino/femenino
+    item_requests:
+      admin:
+        item_requests:
+          actions:
+            create_new: Crear nuevo item request
+            reorder: Reordenar item requests
+            reorder_done: Reordenación de item requests completada
+          records:
+            title: Item Requests
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay item requests todavía. Pulsa en "Crear nuevo Item Request" para crear tu primer item request.
+          item_request:
+            view_live_html: Ver este item request como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este item request
+            delete: Borrar este item request para siempre
+      item_requests:
+        show:
+          other: Otros item requests
+  activerecord:
+    attributes:
+      'refinery/item_requests/item_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires

@@ -1,0 +1,32 @@
+zh-CN:
+  refinery:
+    plugins:
+      item_requests:
+        title: Item Requests
+    item_requests:
+      admin:
+        item_requests:
+          actions:
+            create_new: 建立新的 Item Request
+            reorder: 对 Item Requests 重新排序
+            reorder_done: 对 Item Requests 的重新排序结束
+          records:
+            title: Item Requests
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Item Requests yet. Click "Add New Item Request" to add your first item request.
+            no_items_yet: 目前没有 Item Requests . 点击 "Add New Item Request" 创建一个item request.
+          item_request:
+            view_live_html: 查看 item request 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 item request
+            delete: 永久删除 item request
+      item_requests:
+        show:
+          other: 其他 Item Requests
+  activerecord:
+    attributes:
+      'refinery/item_requests/item_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires

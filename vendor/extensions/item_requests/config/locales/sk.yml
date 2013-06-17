@@ -1,0 +1,30 @@
+sk:
+  refinery:
+    plugins:
+      item_requests:
+        title: Item Requests
+    item_requests:
+      admin:
+        item_requests:
+          actions:
+            create_new: Pridať Item Request
+            reorder: Preusporiadať Item Requests
+            reorder_done: Koniec radenia Item Requests
+          records:
+            title: Item Requests
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Item Requests. Kliknite na "Pridať Item Request" pre pridanie prvého item request.
+          item_request:
+            view_live_html: Zobraziť náhľad item request<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť item request
+            delete: Zmazať item request
+      item_requests:
+        show:
+          other: Daľšie Item Requests
+  activerecord:
+    attributes:
+      'refinery/item_requests/item_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires

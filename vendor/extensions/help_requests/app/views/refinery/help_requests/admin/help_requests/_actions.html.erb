@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::HelpRequests::Admin::HelpRequestsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.help_requests_admin_help_requests_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_help_requests_admin_help_request_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::HelpRequests::Admin::HelpRequestsController.sortable? && ::Refinery::HelpRequests::HelpRequest.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Help Requests"),
+                 refinery.help_requests_admin_help_requests_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Help Requests"),
+                 refinery.help_requests_admin_help_requests_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

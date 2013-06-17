@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="help_requests">
+    <% @help_requests.each do |help_request| %>
+      <li>
+        <%= link_to help_request.title, refinery.help_requests_help_request_path(help_request) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

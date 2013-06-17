@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      help_requests:
+        title: Help Requests
+    help_requests:
+      admin:
+        help_requests:
+          actions:
+            create_new: Lag en ny Help Request
+            reorder: Endre rekkefølgen på Help Requests
+            reorder_done: Ferdig å endre rekkefølgen Help Requests
+          records:
+            title: Help Requests
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Help Requests enda. Klikk på "Lag en ny Help Request" for å legge til din første help request.
+          help_request:
+            view_live_html: Vis hvordan denne help request ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne help request
+            delete: Fjern denne help request permanent
+      help_requests:
+        show:
+          other: Andre Help Requests
+  activerecord:
+    attributes:
+      'refinery/help_requests/help_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires

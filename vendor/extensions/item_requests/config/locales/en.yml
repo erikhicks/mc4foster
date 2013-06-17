@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      item_requests:
+        title: Item Requests
+    item_requests:
+      admin:
+        item_requests:
+          actions:
+            create_new: Add New Item Request
+            reorder: Reorder Item Requests
+            reorder_done: Done Reordering Item Requests
+          records:
+            title: Item Requests
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Item Requests yet. Click "Add New Item Request" to add your first item request.
+          item_request:
+            view_live_html: View this item request live <br/><em>(opens in a new window)</em>
+            edit: Edit this item request
+            delete: Remove this item request forever
+      item_requests:
+        show:
+          other: Other Item Requests
+  activerecord:
+    attributes:
+      'refinery/item_requests/item_request':
+        title: Title
+        description: Description
+        contact: Contact
+        expires: Expires
