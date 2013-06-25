@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
@@ -57,5 +58,7 @@ gem 'refinerycms-help_requests', :path => 'vendor/extensions'
 
 gem 'refinerycms-memberships', :git => 'https://github.com/rbriank/refinerycms_membership.git'
 gem 'refinerycms-settings'
+
+gem 'refinerycms-sl-calendar', '~> 2.0.6.3'
 
 gem 'forem', :git => "git://github.com/radar/forem.git"

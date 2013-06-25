@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130416012567) do
+ActiveRecord::Schema.define(:version => 20130625061003) do
 
   create_table "forem_categories", :force => true do |t|
     t.string   "name",       :null => false
@@ -107,6 +107,56 @@ ActiveRecord::Schema.define(:version => 20130416012567) do
   add_index "forem_views", ["updated_at"], :name => "index_forem_views_on_updated_at"
   add_index "forem_views", ["user_id"], :name => "index_forem_views_on_user_id"
   add_index "forem_views", ["viewable_id"], :name => "index_forem_views_on_topic_id"
+
+  create_table "refinery_calendar_event_translations", :force => true do |t|
+    t.integer  "refinery_calendar_event_id"
+    t.string   "locale"
+    t.string   "title"
+    t.string   "excerpt"
+    t.text     "description"
+    t.string   "slug"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  add_index "refinery_calendar_event_translations", ["locale"], :name => "index_refinery_calendar_event_translations_on_locale"
+  add_index "refinery_calendar_event_translations", ["refinery_calendar_event_id"], :name => "index_ec3d2cb9bdea0fea558012b31c49229aa7dbaa96"
+
+  create_table "refinery_calendar_events", :force => true do |t|
+    t.string   "title"
+    t.string   "registration_link"
+    t.string   "excerpt"
+    t.text     "description"
+    t.integer  "position"
+    t.boolean  "featured"
+    t.string   "slug"
+    t.integer  "venue_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+  end
+
+  create_table "refinery_calendar_venue_translations", :force => true do |t|
+    t.integer  "refinery_calendar_venue_id"
+    t.string   "locale"
+    t.string   "name"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  add_index "refinery_calendar_venue_translations", ["locale"], :name => "index_refinery_calendar_venue_translations_on_locale"
+  add_index "refinery_calendar_venue_translations", ["refinery_calendar_venue_id"], :name => "index_c57881f11327c405cf49fadf52fe4533ed5ec537"
+
+  create_table "refinery_calendar_venues", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "url"
+    t.string   "phone"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "refinery_help_requests", :force => true do |t|
     t.string   "title"

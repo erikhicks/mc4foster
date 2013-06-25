@@ -203,6 +203,8 @@ GEM
       routing-filter (>= 0.2.3)
     refinerycms-settings (2.0.2)
       refinerycms-core (~> 2.0.1)
+    refinerycms-sl-calendar (2.0.6.3)
+      refinerycms-core (~> 2.0.6)
     routing-filter (0.3.1)
       actionpack
     rubypython (0.5.3)
@@ -260,6 +262,7 @@ DEPENDENCIES
   refinerycms-item_requests!
   refinerycms-memberships!
   refinerycms-settings
+  refinerycms-sl-calendar (~> 2.0.6.3)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
